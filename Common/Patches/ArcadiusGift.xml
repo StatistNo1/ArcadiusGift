@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName="MeteoriteImpact"]/label</xpath>
+				<value><label>arcadius' gift</label></value>
+			</li>
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName="MeteoriteImpact"]/letterLabel</xpath>
+				<value><letterLabel>Arcadius' gift</letterLabel></value>
+			</li>
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/IncidentDef[defName="MeteoriteImpact"]/letterText</xpath>
+				<value><letterText>Arcadius has sent you a gift. It has left behind a lump of {0}</letterText></value>
+			</li>
+			<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Events Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/IncidentDef[defName="VEE_MeteoriteShower"]/label</xpath>
+								<value><label>arcadius' blessing</label></value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/IncidentDef[defName="VEE_MeteoriteShower"]/letterLabel</xpath>
+								<value><letterLabel>Arcadius' blessing</letterLabel></value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/IncidentDef[defName="VEE_MeteoriteShower"]/letterText</xpath>
+								<value><letterText>Arcadius has sent you a blessing. It has left behind large lumps of resources</letterText></value>
+							</li>
+						</operations>
+					</match>
+				</li>
+		</operations>
+	</Operation>
+</Patch>
